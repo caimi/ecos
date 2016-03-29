@@ -1,0 +1,31 @@
+<div ng-controller="homeCtrl">
+
+    <div class="row" style="text-align: center; color: #F57C00">
+        <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true" style="font-size: 100px"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="home.txtSearch" aria-label="Text input with segmented button dropdown">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="home.search()">
+                        <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true" style="color: #F57C00"></span>
+                    </button>
+                   <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #F57C00">
+                     {{ home.sector }} <span class="caret"></span>
+                   </button>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="o in home.sectors"><a href="#" ng-click="home.setSector(o)">{{o}}</a></li>
+                    </ul>
+                    <button type="button" class="btn btn-default dropdown-toggle" aria-label="Left Align" ng-click="home.gotoShop()">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="color: #F57C00"></span>
+                    </button>                  
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</div>
+<hr>
+<!-- /end file -->

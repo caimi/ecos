@@ -1,0 +1,31 @@
+<div ng-controller="resultCtrl">
+  <div style="font-size: 10px; color: #880000">{{result.err}}</div>
+  <h1>{{result.query}}</h1>
+  <div class="form-inline">
+    <input type='text' ng-model='tagFilter' class="form-control" placeholder="filtrar resultados">
+    <input type='text' ng-model='tagFilter1' class="form-control" placeholder="filtrar resultados">
+    <button type="button" class="btn btn-primary" ng-click="result.sortResults('cssLink')">loja</button>
+    <button type="button" class="btn btn-primary" ng-click="result.sortResults('cssTitle')">nome</button>
+    <button type="button" class="btn btn-primary" ng-click="result.sortResults('cssOff')">preço</button>
+  </div>
+
+  <div class="row" style="margin: 20px">
+    <div class="col-sm-3" ng-repeat="reg in result.registers | filter:tagFilter | filter:tagFilter1" >
+        <div class="rs-wrap wrap">
+          <div class="result"><span>{{reg.cssLink.split('.')[1]}}</span></div>
+          <div style="margin: 5px; width: 90%; height:90%; overflow: hidden;">
+            <img ng-src='{{reg.cssImage}}' style="width: 100%" ng-mouseover="show=true" ng-mouseleave="show=false"><br>
+          </div>
+          <div class="result-title"><a href="{{reg.cssLink}}" target="_blank">{{reg.cssTitle}}</a><br></div>
+          <div style="font-size: 10px"><span>{{reg.cssPrice}}</span> - <span>{{reg.cssOff}}</span></div>
+          <div style="font-size: 10px">
+            <span>{{reg.cssParcel}}</span>
+            <span>{{reg.cssParcelTimes}}</span>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+</div>
+<hr>
+<!-- /end file -->

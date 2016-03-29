@@ -1,2 +1,5 @@
-# ecos
-e commerces one search
+# ECOS
+e-commerce one search
+
+one search multiples e commerce sites
+

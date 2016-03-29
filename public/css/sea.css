@@ -1,0 +1,93 @@
+body{
+  margin: 10px;
+  background: #F1D788;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+}
+
+div{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+}
+
+label {
+  color: #444444;
+  width: 75px;
+  text-align: right
+}
+
+.searchHeader{
+  height: 150px;
+  background-color: #e45430;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  color: #F1D788
+}
+
+.search{
+  /*margin-top: 20px;*/
+  border: none;
+  height: 50px;
+  background: #FFE0B2;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.bt{
+  padding: 5px 10px;
+  background: #FF9800;
+  color: #212121;
+  border: 1px solid #F57C00;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px
+}
+
+.searchBar {
+  width: 500px;
+  background: #FF9800;
+  color: #212121;
+  border: 1px solid #F57C00;
+  height: 20px;
+  border-radius: 5px;
+  padding: 5px;    
+}
+
+.result{
+  background: #F57C00; 
+  color: #fff; 
+  font-weight: bold
+}
+
+.result-title{
+  font-size: 10px; 
+  overflow: hidden; 
+  height: 25px;  
+}
+
+.wrap {
+  text-align: center; background: #fff; border: 2px solid #F57C00; margin-top: 10px
+}
+
+@media (min-width: 970px){
+  div.rs-wrap{
+    max-height: 334px;
+  }
+}
+@media (min-width: 1070px){
+  div.rs-wrap{
+    max-height: 380px;
+  }
+}
+.dark-primary-color    { background: #F57C00; }
+.default-primary-color { background: #FF9800; }
+.light-primary-color   { background: #f1f1f1; }
+.text-primary-color    { color: #212121; }
+.accent-color          { background: #607D8B; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.header-text-color     { color: #FFE0B2; }
+.divider-color         { border-color: #B6B6B6; }

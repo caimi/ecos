@@ -1,0 +1,23 @@
+<div ng-controller="shopCtrl">
+  <div class="form-inline">
+    <input type='text' ng-model='tagFilter' class="form-control" placeholder="filtrar">
+  </div>
+  
+  <div class="row" style="margin: 20px">
+    <div class="col-md-6" ng-repeat="reg in shop.sites | filter:tagFilter" >
+        <div style="background: #f1f1f1; border: 1px solid {{reg.color}}; margin-top: 10px">
+          <div style="background: {{reg.color}}; color: #fff; font-weight: bold; padding: 5px">
+            <div style="float: left; background: #f1f1f1; padding: 5px; margin-left: -5px; margin-top: -5px">
+              <img ng-src="{{reg.ico}}" width="16px" height="16px;">
+            </div>
+            <span  style="padding-left: 5px; font-weight: bold">{{reg.name}}</span>
+          </div>
+          <div style="padding: 5px"><label>url:</label> <span>{{reg.url}}</span></div>
+          <div style="padding: 5px"><label>cor:</label> <span>{{reg.color}}</span></div>
+          <div style="padding: 5px"><label>tags:</label> <span>{{shop.printTags(reg.tag)}}</span></div>
+        </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- /end file -->
